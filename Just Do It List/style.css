@@ -8,8 +8,9 @@
 .container{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg,#434578,#bdcd4d);
     padding: 10px;
+    background: radial-gradient(125% 125% at 50% 10%, #000 40%, #ff5945 80%, #ff5945 100%);
+
 }
 
 .todo-app{
@@ -22,7 +23,7 @@
 }
 
 .todo-app h2{
-    color: #7478;
+    color: #000;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -63,12 +64,17 @@ button{
     border-radius: 40px;
 }
 
+button:hover{
+    background: #b94033;
+}
+
 ul li{
     list-style: none;
     font-size: 17px;
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
+    position: relative;
 }
 
 ul li::before{
@@ -80,6 +86,8 @@ ul li::before{
     background-image: url(images/unchecked.png);
     background-size: cover;
     background-position: center;
+    top: 12px;
+    left: 8px;
 }
 
 ul li.checked{
@@ -98,7 +106,7 @@ ul li span{
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color: #555;
+    color: #ff5945;
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
@@ -106,4 +114,19 @@ ul li span{
 
 ul li span:hover{
     background: #edeef0;
+}
+
+.clear-button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.clear-button:hover {
+    background: #b94033;
 }
