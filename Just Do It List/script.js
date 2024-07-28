@@ -4,7 +4,7 @@ const clearButton = document.getElementById("clear-button");
 
 function addTask(){
     if(inputBox.value === ''){
-        alert("You must write soemthing")
+        alert("You can only commit to what type!")
     }
     else{
         let li = document.createElement("li")
